@@ -65,3 +65,7 @@ Include
   - Base the styles (the ones that go inside `className=""`) on the header component.
   - Change some colors around to make it distinct from the header.
 - the propper _HTML Tag_ to distinguish the content as a [footer](https://www.w3schools.com/tags/tag_footer.asp)
+
+## Sample Solution
+
+Take a look at the `solution` branch to see what I did to complete these tasks
