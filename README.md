@@ -8,6 +8,11 @@ Use `npm run dev` to start the application
 
 ## List of Goals
 
+By the end of these tasks, we will end up with something that looks like this!
+
+<img width="714" alt="Result" src="https://github.com/user-attachments/assets/d61c5f62-a190-463d-a54f-7fd6ed21efcd">
+
+
 ### Task 0:
 
 The font color for the logo is looking a bit off–- pick a new color for it. First try and find where the title is and how the color is defined.
