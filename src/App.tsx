@@ -41,8 +41,8 @@ const App = () => {
     <>
       <Header />
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        {posts.map((post) => {
-          return <div>{post}</div>;
+        {posts.map((post, i) => {
+          return <div key={i + "post"}>{post}</div>;
         })}
       </main>
       <Footer />
