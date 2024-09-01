@@ -54,6 +54,8 @@ Pretty much every Sandbox project includes a footer at the bottom of the screen.
 
 Based on everything you've learned, try to make a `Footer.tsx` component and place it at the bottom of our app.
 
+Look at [Search](https://searchneu.com/NEU) and [Graduate](https://graduatenu.com/) for some inspiration.
+
 Include
 
 - that the project was made by Sandbox
