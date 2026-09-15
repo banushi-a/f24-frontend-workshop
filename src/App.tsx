@@ -15,8 +15,8 @@ const App = () => {
         <>
           {header}
           <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            {posts.map((post) => {
-              return <div>{post}</div>;
+            {posts.map((post, index) => {
+              return <div key={index}>{post}</div>;
             })}
           </main>
         </>
