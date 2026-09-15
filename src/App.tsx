@@ -1,5 +1,6 @@
 import BirdPreview from "./components/BirdPreview";
 import Bird1 from "./images/bird1.jpg";
+import Header from "./components/Header";
 
 const App = () => {
   /* NOTE:
@@ -8,22 +9,18 @@ const App = () => {
       API which returns some JSON data that we can then parse and use in
       our apps.
   */
-  const posts = [<BirdPreview imageSrc={Bird1} />];
-
-  return (
-    <>
-      <header className="bg-yellow-100 w-screen py-2 px-4">
-        <ul className="text-xl flex justify-between items-center">
-          <li className="text-green-700 text-3xl font-bold">🐣 Chirper</li>
-        </ul>
-      </header>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        {posts.map((post) => {
-          return <div>{post}</div>;
-        })}
-      </main>
-    </>
-  );
+      const posts = [<BirdPreview imageSrc={Bird1} />];
+      const header = <Header title="🐣 Chirper" />;
+      return (
+        <>
+          {header}
+          <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            {posts.map((post) => {
+              return <div>{post}</div>;
+            })}
+          </main>
+        </>
+      );
 };
 
 export default App;
