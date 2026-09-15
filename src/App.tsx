@@ -1,5 +1,9 @@
 import BirdPreview from "./components/BirdPreview";
 import Bird1 from "./images/bird1.jpg";
+import Bird2 from "./images/bird2.jpg";
+import Bird3 from "./images/bird3.jpg";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   /* NOTE:
@@ -8,22 +12,25 @@ const App = () => {
       API which returns some JSON data that we can then parse and use in
       our apps.
   */
-  const posts = [<BirdPreview imageSrc={Bird1} />];
-
-  return (
-    <>
-      <header className="bg-yellow-100 w-screen py-2 px-4">
-        <ul className="text-xl flex justify-between items-center">
-          <li className="text-green-700 text-3xl font-bold">🐣 Chirper</li>
-        </ul>
-      </header>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        {posts.map((post) => {
-          return <div>{post}</div>;
-        })}
-      </main>
-    </>
-  );
+      const posts = [
+        <BirdPreview title= "Some bird" description= "ah blud" imageSrc={Bird1} />,
+        <BirdPreview title= "Random bird 2" description= "fat ah" imageSrc={Bird2} />,
+        <BirdPreview title= "Random jit 3" description= "why he kinda" imageSrc={Bird3} />,
+      ];
+      const header = <Header title="🐣 Chirper" />;
+      return (
+        <>
+          {header}
+          <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            {posts.map((post, index) => {
+              return <div key={index}>{post}</div>;
+            })}
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </>
+      );
 };
 
 export default App;
