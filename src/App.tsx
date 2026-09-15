@@ -3,6 +3,7 @@ import Bird1 from "./images/bird1.jpg";
 import Bird2 from "./images/bird2.jpg";
 import Bird3 from "./images/bird3.jpg";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   /* NOTE:
@@ -12,9 +13,9 @@ const App = () => {
       our apps.
   */
       const posts = [
-        <BirdPreview title= "Some bird" description= "Some description" imageSrc={Bird1} />,
-        <BirdPreview title= "Random bird 2" description= "Some description" imageSrc={Bird2} />,
-        <BirdPreview title= "Random jit 3" description= "Some description" imageSrc={Bird3} />,
+        <BirdPreview title= "Some bird" description= "ah blud" imageSrc={Bird1} />,
+        <BirdPreview title= "Random bird 2" description= "fat ah" imageSrc={Bird2} />,
+        <BirdPreview title= "Random jit 3" description= "why he kinda" imageSrc={Bird3} />,
       ];
       const header = <Header title="🐣 Chirper" />;
       return (
@@ -25,6 +26,9 @@ const App = () => {
               return <div key={index}>{post}</div>;
             })}
           </main>
+          <footer>
+            <Footer />
+          </footer>
         </>
       );
 };
