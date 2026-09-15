@@ -1,5 +1,7 @@
 import BirdPreview from "./components/BirdPreview";
 import Bird1 from "./images/bird1.jpg";
+import Bird2 from "./images/bird2.jpg";
+import Bird3 from "./images/bird3.jpg";
 import Header from "./components/Header";
 
 const App = () => {
@@ -9,7 +11,11 @@ const App = () => {
       API which returns some JSON data that we can then parse and use in
       our apps.
   */
-      const posts = [<BirdPreview title= "Some bird" description= "Some description" imageSrc={Bird1} />];
+      const posts = [
+        <BirdPreview title= "Some bird" description= "Some description" imageSrc={Bird1} />,
+        <BirdPreview title= "Random bird 2" description= "Some description" imageSrc={Bird2} />,
+        <BirdPreview title= "Random jit 3" description= "Some description" imageSrc={Bird3} />,
+      ];
       const header = <Header title="🐣 Chirper" />;
       return (
         <>

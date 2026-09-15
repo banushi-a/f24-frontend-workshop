@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type BirdPreviewProps = {
   title: string;
   description: string;
@@ -9,6 +11,12 @@ const BirdPreview = ({
   description,
   imageSrc,
 }: BirdPreviewProps): JSX.Element => {
+  const [likes, setLikes] = useState(0);
+
+  const handleLike = () => {
+    setLikes(likes + 1);
+  };
+
   return (
     <div className="flex bg-yellow-100 p-8 m-2 rounded text-black">
       <img
@@ -22,7 +30,9 @@ const BirdPreview = ({
         <h2 className="text-xl font-bold">{title}</h2>
         <p>{description}</p>
         <div className="text-right">
-          <button>0 👍</button> {/* TODO */}
+          <button onClick={handleLike}>
+            {likes} 👍
+          </button>
         </div>
       </div>
     </div>
