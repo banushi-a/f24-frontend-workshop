@@ -9,7 +9,7 @@ const App = () => {
       API which returns some JSON data that we can then parse and use in
       our apps.
   */
-      const posts = [<BirdPreview imageSrc={Bird1} />];
+      const posts = [<BirdPreview title= "Some bird" description= "Some description" imageSrc={Bird1} />];
       const header = <Header title="🐣 Chirper" />;
       return (
         <>
